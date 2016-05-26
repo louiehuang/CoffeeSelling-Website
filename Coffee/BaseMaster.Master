@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BaseMaster.master.cs" Inherits="Coffee.BaseMaster" %>
+
+<!DOCTYPE html >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #110804;
+            height: 100px;
+            color: #CDAA7D;
+        }
+
+        .navigation {
+            margin-left: 12%;
+            height: 50px;
+        }
+
+        .footer {
+            background-color: #2C180B;
+            height: 150px;
+            position: relative;
+        }
+
+
+        .myInfo {
+            position: absolute;
+            right: 30px;
+            bottom: 40px;
+            color: #846937;
+            font-family: 'Bell MT';
+        }
+
+        .running_enviroment {
+            position: absolute;
+            right: 30px;
+            bottom: 10px;
+            font-family: 'Bell MT';
+            color: #846937;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <div class="header">
+                <div class="navigation">
+                    <asp:Menu ID="NavigationMenu" runat="server" BackColor="#100703"
+                        Orientation="Horizontal"
+                        ForeColor="#CDAA7D"
+                        Font-Names="Tahoma"
+                        Font-Size="1.1em"
+                        RenderingMode="Table">
+
+                        <DynamicHoverStyle BackColor="#110804" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#110804" />
+                        <DynamicMenuItemStyle Width="80px" HorizontalPadding="40px" VerticalPadding="12px" />
+
+                        <StaticHoverStyle BackColor="#110804" ForeColor="White" />
+                        <StaticMenuItemStyle Width="80" HorizontalPadding="40px" VerticalPadding="12px" />
+
+                        <Items>
+                            <asp:MenuItem Text="COFFEE" Value="COFFEE"></asp:MenuItem>
+                            <asp:MenuItem Text="HARDWARE" Value="HARDWARE"></asp:MenuItem>
+                            <asp:MenuItem Text="SHOP" Value="SHOP"></asp:MenuItem>
+
+                            <asp:MenuItem Text="LOCATIONS" Value="LOCATIONS">
+                                <asp:MenuItem NavigateUrl="#" Text="PIKE PLACE" Value="PIKE PLACE"></asp:MenuItem>
+                                <asp:MenuItem Text="QUEEN ANNE" Value="QUEEN ANNE"></asp:MenuItem>
+                                <asp:MenuItem Text="1ST & MADISON" Value="1ST & MADISON"></asp:MenuItem>
+                                <asp:MenuItem Text="ROASTING STUDIO" Value="ROASTING STUDIO"></asp:MenuItem>
+                            </asp:MenuItem>
+
+                            <asp:MenuItem Text="OUR STORY" Value="OUR STORY"></asp:MenuItem>
+                        </Items>
+
+                    </asp:Menu>
+                </div>
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                <p>
+                    <br />
+                </p>
+            </asp:ContentPlaceHolder>
+
+            <div class="footer">
+                <hr style="border-color: #EEDC82; border-top: 0.5px" />
+                <p class="myInfo">Powered by Hlyin(Louie, 2013210792)</p>
+                <p class="running_enviroment">Run with google chrome browser</p>
+            </div>
+
+        </div>
+    </form>
+
+</body>
+</html>
